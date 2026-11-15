@@ -1,0 +1,222 @@
+/* Ported unchanged from the Django site's static/custom.css */
+
+body {
+  background: #17171F;
+}
+.container .bio {
+  color: #7e8ba5;
+  font-size: large;
+  padding-top: 1em;
+}
+.container .bio-body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container .bio span {
+  color: #71D6C8;
+}
+.container .lead {
+  color: #71D6C8;
+}
+.container .recent-skills-header {
+  color: #7e8ba5;
+  font-size: large;
+  padding-top: 1em;
+}
+.container .recent-skills-header span {
+  color: #71D6C8;
+}
+.skills-list {
+  font-size: large;
+}
+.skills-list i {
+  color: #71D6C8;
+}
+.navbar {
+  padding: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+.nav-item {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+ul a:hover{
+  color: white !important;
+}
+nav li{
+    text-align: center;
+    text-transform: uppercase;
+}
+li > a:after{
+    content: '';
+    display: block;
+    height: 1.5px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+li > a:hover:after{
+    transform: scaleX(1);
+    transition: transform .3s;
+}
+.active{
+    color: white !important;
+}
+.jumbotron {
+  background: #17171F;
+  padding-top: 1vh;
+}
+.jumbotron h1 {
+  color: white;
+  font-weight: bold;
+}
+.jumbotron p {
+  color: white;
+}
+.jumbotron hr {
+  border-top: 1px solid white;
+}
+.home-buttons {
+  padding-top: 2em;
+  padding-right: 2em;
+}
+
+.profile-pic {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.profile-pic img {
+  border-style: groove;
+  border-color: #71D6C8;
+  width: 20vw;
+}
+
+@media only screen
+and (min-width : 300px) {
+  .profile-pic img {
+    width: 30vh;
+  }
+}
+
+.other-button {
+  padding-top: 2em;
+}
+.skills-icon {
+  font-size: 5em;
+}
+.skills-col {
+  margin: 2em;
+}
+.card {
+  background-color: #112240;
+}
+.fa-arrow-up-right-from-square:hover {
+  color: #71D6C8;
+}
+.project-github-button:hover {
+  color: #71D6C8;
+}
+.card:hover {
+  transform: translate(0px, -5px);
+}
+.card {
+  transition: 0.3s;
+}
+.contact-button{
+  transition: transform 0.2s ease;
+}
+.contact-button:hover {
+  opacity: 0.5;
+  transform: translateY(-10px);
+}
+.mobile-line-break{
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .mobile-line-break {
+    display: block;
+  }
+}
+
+.bio-div {
+  width: 80%
+}
+
+@media only screen and (max-width: 1000px) {
+  .bio-div {
+    width: 100%
+  }
+}
+
+/** ----------------------- typing animation ----------------------- **/
+.typing-container {
+  padding-top: 1vh;
+}
+.typing-container p span.typed-text {
+  font-weight: bold;
+  color: #71D6C8;
+}
+.typing-container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.typing-container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+/** ----------------------- buttons ----------------------- **/
+/** Flatted button %placeholder **/
+.btn-iconed.btn-flat {
+  border-radius: 0em;
+}
+/** Rounded button **/
+.btn-rounded {
+  border-radius: 0.5em;
+}
+/** Button Iconed **/
+.btn-iconed {
+  transition: 0.15s ease-in-out;
+  padding-left: 1.5em;
+  padding-right: 1.3em;
+}
+.btn-iconed [class~=oi]::before {
+  opacity: 0;
+  transform-origin: left right;
+  transform: translateX(-10px) scale(1.25);
+  transition: 0.15s ease-out;
+}
+.btn-iconed [class=spn] {
+  position: relative;
+  left: -9px;
+  transform-origin: left right;
+  transform: translateX(-9px);
+  transition: 0.2s ease-in-out;
+}
+.btn-iconed:hover [class~=oi]::before {
+  opacity: 1;
+  transform: translateX(0px) scale(0.75);
+}
+.btn-iconed:hover [class=spn] {
+  left: 0px;
+}

@@ -1,0 +1,46 @@
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-about',
+  standalone: true,
+  imports: [RouterLink],
+  template: `
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-center">About Me</h1>
+        <div class="profile-pic text-center">
+          <img src="img/profilepic.jpg" class="rounded-circle" alt="Picture of Jacob Hollis" />
+        </div>
+        <div style="text-align: left;">
+          <div class="bio-body">
+            <p class="bio">
+              Hello! My name is <span>Jacob</span> (but most of the time I go by <span>Jake</span>) and I enjoy
+              solving complex real-world problems and building impactful solutions. My interest in coding and
+              software development began way back when as a kid I discovered how to code games in Lua. That early
+              experience motivated me to explore programming in college, which led to my current career as a
+              software engineer.
+            </p>
+            <p class="bio">
+              In the present, I primarily work with <span>C#</span>, <span>Java</span>, and <span>Python</span> but
+              I am always learning and exploring new technologies, so you may see me tinkering around with other
+              frameworks such as <span>Angular</span> (hey that's what this website is built with 😉),
+              <span>Django</span>, <span>React</span>, <span>Ruby</span>, and many others.
+            </p>
+            <p class="bio">
+              If you want to see the full list of technologies I work with, head over to my skills:
+            </p>
+            <div class="text-left other-button">
+              <a routerLink="/skills">
+                <button class="btn btn-iconed btn-lg btn-rounded btn-outline-warning" role="button">
+                  <span class="spn">Skills</span> <i class="fa fa-arrow-right"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+})
+export class AboutComponent {}

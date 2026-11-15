@@ -1,0 +1,15 @@
+# Netlify build settings. The publish path assumes the Angular project is named "portfolio-site"
+# (what setup.sh creates). If you rename the project, change it to dist/<name>/browser.
+[build]
+  command = "npm run build"
+  publish = "dist/portfolio-site/browser"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Single-page app fallback: serve index.html for any path (e.g. /projects) so deep links and
+# page refreshes work. Real files like /img/logo.png are still served as-is.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
